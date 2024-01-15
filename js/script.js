@@ -143,8 +143,6 @@ console.log(arrayCopia);
 function verificarElemento(array, elemento) {
     if (array.length === 0) {
         return undefined;
-    } else if (isNaN(elemento)) {
-        throw new Error(`El valor ${elemento} no es un número. En realidad su tipo es ${typeof(elemento)}.`);
     }
 
     for (let i = 0; i < array.length; i++) {
@@ -237,7 +235,7 @@ function encontrarPosicion(array, elemento) {
     } else if (isNaN(elemento)) {
         throw new Error(`El valor ${elemento} no es un número. En realidad su tipo es ${typeof(elemento)}.`);
     }
-    
+
     for (let i = 0; i < array.length; i++) {
         if (array[i] === elemento) {
             return i;
